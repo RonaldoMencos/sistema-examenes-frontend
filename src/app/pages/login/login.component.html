@@ -13,10 +13,11 @@
           </div>
           <h1 class="text-center">Iniciar Sesión</h1>
 
-          <form action="">
+          <form (ngSubmit)="formSubmit()">
             <mat-form-field class="full-width" appearance="outline">
               <mat-label>Username</mat-label>
               <input
+                [(ngModel)]="loginData.username"
                 required
                 name="username"
                 matInput
@@ -28,6 +29,7 @@
             <mat-form-field class="full-width" appearance="outline">
               <mat-label>Contraseña</mat-label>
               <input
+                [(ngModel)]="loginData.password"
                 required
                 type="password"
                 name="password"
